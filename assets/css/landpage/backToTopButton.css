@@ -8,24 +8,28 @@
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: var(--rodamel-white);
-    border: var(--rodamel-orange);
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
+    background: var(--lavanda-dark);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     transition: all 0.4s;
-    color: var(--rodamel-orange);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(124, 94, 138, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .back-to-top i {
     font-size: 24px;
     color: #fff;
-    line-height: 0;
 }
 
 .back-to-top:hover {
-    background: var(--rodamel-orange);
+    background: var(--lavanda);
     color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(124, 94, 138, 0.4);
 }
 
 .back-to-top.active {

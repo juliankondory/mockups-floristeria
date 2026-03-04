@@ -83,7 +83,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <span class="hero-badge">🌸 Floristería online · Entrega a domicilio</span>
+                <span class="hero-badge"><i class="bi bi-flower1 me-1"></i> Floristería online · Entrega a domicilio</span>
                 <h1>Flores que expresan<br><em>lo que sientes</em></h1>
                 <h2>Arreglos florales únicos para cumpleaños, aniversarios, momentos románticos y condolencias. Diseñados con amor, entregados a tiempo.</h2>
                 <div class="d-flex flex-wrap align-items-center" style="gap:12px;">
@@ -194,7 +194,7 @@
 
 <!-- ======= Horario Banner ======= -->
 <div class="horario-banner">
-    🌷 <strong>Pedidos con entrega el mismo día</strong> · Lunes a Sábado de 7:30 AM a 5:00 PM · ¡Sorprende hoy mismo!
+    <i class="bi bi-clock-history me-1"></i> <strong>Pedidos con entrega el mismo día</strong> · Lunes a Sábado de 7:30 AM a 5:00 PM · ¡Sorprende hoy mismo!
 </div>
 
 <main id="main">
@@ -295,16 +295,16 @@
             <div class="text-center">
                 <a href="/celebracion/cumpleanos" class="occasion-pill"><i class="bx bx-cake"></i>Cumpleaños</a>
                 <a href="/celebracion/aniversario" class="occasion-pill"><i class="bx bx-heart"></i>Aniversario</a>
-                <a href="/celebracion/dia-de-la-madre" class="occasion-pill">💐 Día de la Madre</a>
-                <a href="/celebracion/dia-de-la-mujer" class="occasion-pill">🌸 Día de la Mujer</a>
-                <a href="/celebracion/san-valentin" class="occasion-pill">❤️ San Valentín</a>
+                <a href="/celebracion/dia-de-la-madre" class="occasion-pill"><i class="bi bi-heart-fill"></i> Día de la Madre</a>
+                <a href="/celebracion/dia-de-la-mujer" class="occasion-pill"><i class="bi bi-flower1"></i> Día de la Mujer</a>
+                <a href="/celebracion/san-valentin" class="occasion-pill"><i class="bi bi-heart-pulse"></i> San Valentín</a>
                 <a href="/celebracion/amor-y-amistad" class="occasion-pill"><i class="bx bx-user-plus"></i>Amor y Amistad</a>
-                <a href="/celebracion/nacimiento" class="occasion-pill">👶 Nacimiento</a>
-                <a href="/celebracion/grado" class="occasion-pill">🎓 Para su Grado</a>
-                <a href="/celebracion/quince-anos" class="occasion-pill">🌟 15 Años</a>
-                <a href="/ocasion/condolencias" class="occasion-pill">🕊️ Condolencias</a>
+                <a href="/celebracion/nacimiento" class="occasion-pill"><i class="bi bi-brightness-high"></i> Nacimiento</a>
+                <a href="/celebracion/grado" class="occasion-pill"><i class="bi bi-mortarboard"></i> Para su Grado</a>
+                <a href="/celebracion/quince-anos" class="occasion-pill"><i class="bi bi-star"></i> 15 Años</a>
+                <a href="/ocasion/condolencias" class="occasion-pill"><i class="bi bi-peace"></i> Condolencias</a>
                 <a href="/ocasion/para-hombre" class="occasion-pill"><i class="bx bx-male"></i>Para Hombres</a>
-                <a href="/ocasion/lo-siento" class="occasion-pill">🤍 Lo Siento</a>
+                <a href="/ocasion/lo-siento" class="occasion-pill"><i class="bi bi-chat-heart"></i> Lo Siento</a>
             </div>
         </div>
     </section><!-- End Ocasiones -->
@@ -322,7 +322,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-img">
-                            🌹
+                            <i class="bi bi-flower1" style="color: #d63384;"></i>
                             <span class="product-badge">Popular</span>
                         </div>
                         <div class="product-body">
@@ -339,7 +339,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-img">
-                            🌻
+                            <i class="bi bi-sun" style="color: #ffc107;"></i>
                             <span class="product-badge">Favorito</span>
                         </div>
                         <div class="product-body">
@@ -356,7 +356,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="product-card">
                         <div class="product-img">
-                            🎁
+                            <i class="bi bi-gift" style="color: #0dcaf0;"></i>
                             <span class="product-badge">Especial</span>
                         </div>
                         <div class="product-body">
@@ -373,7 +373,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="product-card">
                         <div class="product-img">
-                            🍓
+                            <i class="bi bi-basket" style="color: #198754;"></i>
                         </div>
                         <div class="product-body">
                             <h5>Arreglo con Frutas Banquete</h5>
@@ -594,7 +594,7 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- ======= WhatsApp Flotante ======= -->
-<a href="https://wa.me/573204663245?text=Hola%20Delirios%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8C%B8"
+<a href="https://wa.me/573204663245?text=Hola%20Delirios%2C%20quiero%20hacer%20un%20pedido"
    class="whatsapp-float"
    target="_blank"
    rel="noopener"

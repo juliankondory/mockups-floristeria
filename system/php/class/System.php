@@ -26,12 +26,20 @@ abstract  class System
     public static function Conexion()
     {
         try {
+            if (!empty(Constants::$SQLITE_DB_PATH)) {
+                $dsn = "sqlite:" . $_SERVER['DOCUMENT_ROOT'] . Constants::$SQLITE_DB_PATH;
+                return new PDO($dsn);
+            }
             $host   = Constants::$IP_BD;
             $dbname = Constants::$NOMBRE_BD;
             $dsn    = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
-            $dbh    = new PDO($dsn, Constants::$USUARIO_BD, Constants::$PASS_BD);
-            return $dbh;
+            return new PDO($dsn, Constants::$USUARIO_BD, Constants::$PASS_BD);
         } catch (PDOException $e) {
+            // Fallback to SQLite if MySQL fails and SQLite database exists
+            $sqlitePath = $_SERVER['DOCUMENT_ROOT'] . '/system/bd/database.sqlite';
+            if (file_exists($sqlitePath)) {
+                return new PDO("sqlite:" . $sqlitePath);
+            }
             echo $e->getMessage();
         }
     }

@@ -83,27 +83,27 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <span class="hero-badge">🌸 Floristería online · Entrega a domicilio</span>
+                <span class="hero-badge"><i class="bi bi-flower1 me-1"></i> Floristería online · Entrega a domicilio</span>
                 <h1>Flores que expresan<br><em>lo que sientes</em></h1>
                 <h2>Arreglos florales únicos para cumpleaños, aniversarios, momentos románticos y condolencias. Diseñados con amor, entregados a tiempo.</h2>
                 <div class="d-flex flex-wrap align-items-center" style="gap:12px;">
                     <a href="#productos" class="btn-delirios btn-primary-del">Ver Catálogo</a>
                     <a href="https://wa.me/573204663245?text=Hola%20Delirios%2C%20quiero%20hacer%20un%20pedido" target="_blank" class="btn-delirios btn-secondary-del"><i class="bx bxl-whatsapp me-1"></i>Pedir por WhatsApp</a>
                 </div>
-                <div class="hero-stats">
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
                     <div class="hero-stat">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Años de experiencia</span>
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Años creando sonrisas</span>
                     </div>
                     <div class="hero-stat-divider"></div>
                     <div class="hero-stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Diseños disponibles</span>
+                        <span class="stat-number">5.0k+</span>
+                        <span class="stat-label">Clientes felices</span>
                     </div>
                     <div class="hero-stat-divider"></div>
                     <div class="hero-stat">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Flores frescas</span>
+                        <span class="stat-label">Frescura garantizada</span>
                     </div>
                 </div>
             </div>
@@ -153,14 +153,19 @@
                         </g>
                         <!-- Pequeños detalles flotantes -->
                         <circle cx="160" cy="130" r="5" fill="var(--lavanda)" opacity="0.4">
-                            <animate attributeName="cy" values="130;120;130" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="cy" values="130;110;130" dur="4s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
                         </circle>
                         <circle cx="270" cy="140" r="4" fill="#F0B429" opacity="0.5">
-                            <animate attributeName="cy" values="140;130;140" dur="2.5s" repeatCount="indefinite"/>
+                            <animate attributeName="cy" values="140;120;140" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
                         </circle>
                         <circle cx="240" cy="95" r="3" fill="#E8A0B4" opacity="0.6">
-                            <animate attributeName="cy" values="95;85;95" dur="3.5s" repeatCount="indefinite"/>
+                            <animate attributeName="cy" values="95;75;95" dur="5s" repeatCount="indefinite"/>
                         </circle>
+                        <path d="M50 50 Q70 20 90 50 T130 50" stroke="var(--lavanda)" stroke-width="2" fill="none" opacity="0.2">
+                            <animateTransform attributeName="transform" type="translate" from="-20 0" to="20 0" dur="10s" repeatCount="indefinite"/>
+                        </path>
                         <!-- Gradientes -->
                         <defs>
                             <radialGradient id="pinkGrad" cx="50%" cy="50%" r="50%">
@@ -189,7 +194,7 @@
 
 <!-- ======= Horario Banner ======= -->
 <div class="horario-banner">
-    🌷 <strong>Pedidos con entrega el mismo día</strong> · Lunes a Sábado de 7:30 AM a 5:00 PM · ¡Sorprende hoy mismo!
+    <i class="bi bi-clock-history me-1"></i> <strong>Pedidos con entrega el mismo día</strong> · Lunes a Sábado de 7:30 AM a 5:00 PM · ¡Sorprende hoy mismo!
 </div>
 
 <main id="main">
@@ -206,72 +211,72 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="/categoria/bouquets" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon"><i class="bx bx-leaf"></i></div>
+                            <div class="cat-icon" style="background: rgba(167, 139, 180, 0.1); color: var(--lavanda-dark);"><i class="bx bx-leaf"></i></div>
                             <h4>Bouquets y Ramilletes</h4>
-                            <p>Rosas, girasoles, gerberas y más. Desde $79.900</p>
+                            <p>Rosas, girasoles y más. Desde $79.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="/categoria/arreglos-en-base" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon"><i class="bx bx-gift"></i></div>
+                            <div class="cat-icon" style="background: rgba(74, 103, 65, 0.1); color: var(--verde);"><i class="bx bx-gift"></i></div>
                             <h4>Arreglos en Base</h4>
-                            <p>Composiciones sobre madera. Desde $139.900</p>
+                            <p>Composiciones rústicas. Desde $139.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <a href="/categoria/cajas-florales" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon"><i class="bx bx-package"></i></div>
+                            <div class="cat-icon" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="bx bx-package"></i></div>
                             <h4>Cajas Florales</h4>
-                            <p>Corazones, redondas y cuadradas. Desde $89.900</p>
+                            <p>Corazones y redondas. Desde $89.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <a href="/categoria/fruteros" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon"><i class="bx bx-food-menu"></i></div>
+                            <div class="cat-icon" style="background: rgba(255, 193, 7, 0.1); color: #ffc107;"><i class="bx bx-food-menu"></i></div>
                             <h4>Arreglos con Frutas</h4>
-                            <p>Flores y frutas tropicales. Desde $174.900</p>
+                            <p>Flores y frescura. Desde $174.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="/categoria/jarrones" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon"><i class="bx bx-vial"></i></div>
-                            <h4>Jarrones</h4>
-                            <p>Elegancia en vidrio. Desde $86.900</p>
+                            <div class="cat-icon" style="background: rgba(13, 202, 240, 0.1); color: #0dcaf0;"><i class="bx bx-vial"></i></div>
+                            <h4>Jarrones Elegantes</h4>
+                            <p>Cristal y elegancia. Desde $86.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="/categoria/girasoles" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon" style="color: #F0B429; background: #FFF8E7;">🌻</div>
-                            <h4>Girasoles</h4>
-                            <p>Alegría y luz en cada arreglo. Desde $184.900</p>
+                            <div class="cat-icon" style="background: rgba(240, 180, 41, 0.1); color: #F0B429;"><i class="bx bxs-sun"></i></div>
+                            <h4>Girasoles Radiantes</h4>
+                            <p>Alegría en casa. Desde $184.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <a href="/categoria/funebres" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon" style="color: #fff; background: linear-gradient(135deg, #6B6B6B, #4a4a4a);">🕊️</div>
-                            <h4>Arreglos Fúnebres</h4>
-                            <p>Tributos con respeto y dignidad. Desde $154.900</p>
+                            <div class="cat-icon" style="background: rgba(107, 107, 107, 0.1); color: #6B6B6B;"><i class="bx bx-dove"></i></div>
+                            <h4>Tributos Florales</h4>
+                            <p>Respeto y dignidad. Desde $154.900</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <a href="/categoria/adicionales" class="text-decoration-none">
                         <div class="cat-card">
-                            <div class="cat-icon"><i class="bx bx-plus-circle"></i></div>
-                            <h4>Adicionales</h4>
-                            <p>Globos, chocolates y peluches. Desde $20.900</p>
+                            <div class="cat-icon" style="background: rgba(167, 139, 180, 0.1); color: var(--lavanda-dark);"><i class="bx bx-plus-circle"></i></div>
+                            <h4>Detalles Extras</h4>
+                            <p>Chocolates y globos. Desde $20.900</p>
                         </div>
                     </a>
                 </div>
@@ -290,16 +295,16 @@
             <div class="text-center">
                 <a href="/celebracion/cumpleanos" class="occasion-pill"><i class="bx bx-cake"></i>Cumpleaños</a>
                 <a href="/celebracion/aniversario" class="occasion-pill"><i class="bx bx-heart"></i>Aniversario</a>
-                <a href="/celebracion/dia-de-la-madre" class="occasion-pill">💐 Día de la Madre</a>
-                <a href="/celebracion/dia-de-la-mujer" class="occasion-pill">🌸 Día de la Mujer</a>
-                <a href="/celebracion/san-valentin" class="occasion-pill">❤️ San Valentín</a>
+                <a href="/celebracion/dia-de-la-madre" class="occasion-pill"><i class="bi bi-heart-fill"></i> Día de la Madre</a>
+                <a href="/celebracion/dia-de-la-mujer" class="occasion-pill"><i class="bi bi-flower1"></i> Día de la Mujer</a>
+                <a href="/celebracion/san-valentin" class="occasion-pill"><i class="bi bi-heart-pulse"></i> San Valentín</a>
                 <a href="/celebracion/amor-y-amistad" class="occasion-pill"><i class="bx bx-user-plus"></i>Amor y Amistad</a>
-                <a href="/celebracion/nacimiento" class="occasion-pill">👶 Nacimiento</a>
-                <a href="/celebracion/grado" class="occasion-pill">🎓 Para su Grado</a>
-                <a href="/celebracion/quince-anos" class="occasion-pill">🌟 15 Años</a>
-                <a href="/ocasion/condolencias" class="occasion-pill">🕊️ Condolencias</a>
+                <a href="/celebracion/nacimiento" class="occasion-pill"><i class="bi bi-brightness-high"></i> Nacimiento</a>
+                <a href="/celebracion/grado" class="occasion-pill"><i class="bi bi-mortarboard"></i> Para su Grado</a>
+                <a href="/celebracion/quince-anos" class="occasion-pill"><i class="bi bi-star"></i> 15 Años</a>
+                <a href="/ocasion/condolencias" class="occasion-pill"><i class="bi bi-peace"></i> Condolencias</a>
                 <a href="/ocasion/para-hombre" class="occasion-pill"><i class="bx bx-male"></i>Para Hombres</a>
-                <a href="/ocasion/lo-siento" class="occasion-pill">🤍 Lo Siento</a>
+                <a href="/ocasion/lo-siento" class="occasion-pill"><i class="bi bi-chat-heart"></i> Lo Siento</a>
             </div>
         </div>
     </section><!-- End Ocasiones -->
@@ -317,7 +322,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-img">
-                            🌹
+                            <i class="bi bi-flower1" style="color: #d63384;"></i>
                             <span class="product-badge">Popular</span>
                         </div>
                         <div class="product-body">
@@ -334,7 +339,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-img">
-                            🌻
+                            <i class="bi bi-sun" style="color: #ffc107;"></i>
                             <span class="product-badge">Favorito</span>
                         </div>
                         <div class="product-body">
@@ -351,7 +356,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="product-card">
                         <div class="product-img">
-                            🎁
+                            <i class="bi bi-gift" style="color: #0dcaf0;"></i>
                             <span class="product-badge">Especial</span>
                         </div>
                         <div class="product-body">
@@ -368,7 +373,7 @@
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="product-card">
                         <div class="product-img">
-                            🍓
+                            <i class="bi bi-basket" style="color: #198754;"></i>
                         </div>
                         <div class="product-body">
                             <h5>Arreglo con Frutas Banquete</h5>
@@ -480,29 +485,32 @@
                 <h2>Lo que dicen nuestros clientes</h2>
                 <div class="separator mx-auto"></div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"El arreglo llegó puntual y estaba hermoso. Mi mamá no podía creer la calidad de las flores. ¡Totalmente recomendado!"</p>
-                        <span class="name">— María C.</span>
+                <div class="row g-4 testimonials-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="col-lg-4 col-md-6 swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                            <div class="testimonial-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"El arreglo llegó puntual y estaba hermoso. Mi mamá no podía creer la calidad de las flores. ¡Totalmente recomendado!"</p>
+                                <span class="name">— María C.</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                            <div class="testimonial-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"Pedí una caja de rosas para el aniversario y fue un éxito total. El servicio es excelente y el diseño, único."</p>
+                                <span class="name">— Carlos M.</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 swiper-slide" data-aos="fade-up" data-aos-delay="300">
+                            <div class="testimonial-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"El arreglo con frutas que pedí fue espectacular. Las flores frescas y la presentación, impecable. ¡Repetiré sin dudarlo!"</p>
+                                <span class="name">— Ana L.</span>
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-pagination mt-4"></div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Pedí una caja de rosas para el aniversario y fue un éxito total. El servicio es excelente y el diseño, único."</p>
-                        <span class="name">— Carlos M.</span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"El arreglo con frutas que pedí fue espectacular. Las flores frescas y la presentación, impecable. ¡Repetiré sin dudarlo!"</p>
-                        <span class="name">— Ana L.</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section><!-- End Testimonios -->
 
@@ -586,7 +594,7 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- ======= WhatsApp Flotante ======= -->
-<a href="https://wa.me/573204663245?text=Hola%20Delirios%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8C%B8"
+<a href="https://wa.me/573204663245?text=Hola%20Delirios%2C%20quiero%20hacer%20un%20pedido"
    class="whatsapp-float"
    target="_blank"
    rel="noopener"
@@ -607,6 +615,27 @@
 <script>
     // AOS init
     AOS.init({ duration: 700, easing: 'ease-in-out', once: true });
+
+    // Testimonials slider
+    new Swiper('.testimonials-slider', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1200: { slidesPerView: 3, spaceBetween: 30 }
+        }
+    });
 </script>
 
 </body>

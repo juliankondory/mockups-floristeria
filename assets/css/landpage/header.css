@@ -2,14 +2,22 @@
    HEADER
 ===================================================== */
 #header {
-    background: rgba(253, 246, 238, 0.97);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 2px 18px rgba(124, 94, 138, 0.10);
-    height: 70px;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid var(--lavanda-light);
+    background: rgba(253, 246, 238, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(124, 94, 138, 0.08);
+    height: 80px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(167, 139, 180, 0.2);
     z-index: 997;
+    display: flex;
+    align-items: center;
+}
+
+#header.header-scrolled {
+    height: 70px;
+    background: rgba(253, 246, 238, 0.95);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
 }
 
 #header .logo img {
@@ -166,4 +174,3 @@
         justify-content: center;
     }
 }
-

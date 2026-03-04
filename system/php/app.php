@@ -12,6 +12,7 @@ class Constants{
     static $PASS_BD    = "";
     static $NOMBRE_BD  = "kondoryc_bd";
     static $IP_BD      = "localhost";
+    static $SQLITE_DB_PATH = "";
 
 
     //Mensajes Pagina
@@ -64,6 +65,7 @@ Constants::$IP_BD      = getenv('DB_HOST')          ?: Constants::$IP_BD;
 Constants::$NOMBRE_BD  = getenv('DB_NAME')           ?: Constants::$NOMBRE_BD;
 Constants::$USUARIO_BD = getenv('DB_USER')           ?: Constants::$USUARIO_BD;
 Constants::$PASS_BD    = getenv('DB_PASSWORD')       ?: Constants::$PASS_BD;
+Constants::$SQLITE_DB_PATH = getenv('SQLITE_DB_PATH') ?: Constants::$SQLITE_DB_PATH;
 
 Constants::$MAIL_SMTP_SERVER = getenv('MAIL_SMTP_SERVER') ?: Constants::$MAIL_SMTP_SERVER;
 Constants::$MAIL_SMTP_USER   = getenv('MAIL_SMTP_USER')   ?: Constants::$MAIL_SMTP_USER;

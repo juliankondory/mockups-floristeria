@@ -4,7 +4,7 @@
 
         <h1 class="logo me-auto">
             <a href="/index.php">
-                <img src="/assets/img/logo/logo-delirios-horizontal.png" alt="Floristería Delirios" style="height: 52px; width: auto;">
+                <img src="/assets/img/logo/logo-delirios-horizontal.png" alt="Floristería Delirios" style="height: 52px; width: auto; object-position: center;">
             </a>
         </h1>
 

@@ -1,0 +1,81 @@
+services:
+
+  # -------------------------------------------------------
+  # Aplicación PHP + Apache
+  # -------------------------------------------------------
+  app:
+    build: .
+    container_name: delirios_app
+    ports:
+      - "8080:80"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_NAME: ${DB_NAME:-kondoryc_bd}
+      DB_USER: ${DB_USER:-delirios}
+      DB_PASSWORD: ${DB_PASSWORD:-delirios_pass}
+      MAIL_SMTP_SERVER: ${MAIL_SMTP_SERVER:-mail.kondory.com}
+      MAIL_SMTP_USER: ${MAIL_SMTP_USER:-sistema@kondory.com}
+      MAIL_SMTP_PASS: ${MAIL_SMTP_PASS:-}
+    volumes:
+      - .:/var/www/html
+    networks:
+      - delirios_network
+    restart: unless-stopped
+
+  # -------------------------------------------------------
+  # Base de datos MySQL 8
+  # -------------------------------------------------------
+  db:
+    image: mysql:8.0
+    container_name: delirios_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_pass}
+      MYSQL_DATABASE: ${DB_NAME:-kondoryc_bd}
+      MYSQL_USER: ${DB_USER:-delirios}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-delirios_pass}
+    volumes:
+      - delirios_db_data:/var/lib/mysql
+      - ./system/bd/init.sql:/docker-entrypoint-initdb.d/00-init.sql:ro
+      - ./system/bd/roles-permisos.sql:/docker-entrypoint-initdb.d/01-roles.sql:ro
+      - ./system/bd/delirios-ddl.sql:/docker-entrypoint-initdb.d/02-schema.sql:ro
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-root_pass}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - delirios_network
+    restart: unless-stopped
+
+  # -------------------------------------------------------
+  # phpMyAdmin — gestión visual de la BD en desarrollo
+  # -------------------------------------------------------
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: delirios_phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: ${DB_ROOT_PASSWORD:-root_pass}
+    depends_on:
+      - db
+    networks:
+      - delirios_network
+    restart: unless-stopped
+
+# -------------------------------------------------------
+# Volúmenes y redes
+# -------------------------------------------------------
+volumes:
+  delirios_db_data:
+
+networks:
+  delirios_network:
+    driver: bridge

@@ -1,0 +1,193 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+#footer {
+    background: linear-gradient(160deg, #1E1024 0%, #2C1A35 50%, var(--lavanda-dark) 100%);
+    color: var(--blanco);
+    padding: 60px 0 30px;
+}
+
+#footer h3,
+#footer h4 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--blanco);
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#footer h4::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 32px; height: 2px;
+    background: var(--lavanda);
+    border-radius: 2px;
+}
+
+/* Logo container */
+.footer-logo-container {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.footer-logo-img {
+    max-height: 100%;
+    width: auto;
+    filter: brightness(0) invert(1);   /* logo en blanco sobre fondo oscuro */
+}
+
+/* Slogan */
+#footer .footer-slogan {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--lavanda-light);
+    margin-bottom: 14px;
+}
+
+/* Listas de enlaces */
+#footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer ul li {
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+#footer ul li a,
+#footer ul li span {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.89rem;
+    font-weight: 600;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+#footer ul li a:hover {
+    color: var(--lavanda-light);
+    padding-left: 5px;
+}
+
+#footer ul li i {
+    color: var(--lavanda);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+/* Iconos de redes sociales */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: var(--blanco);
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: var(--lavanda);
+    border-color: var(--lavanda);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(167, 139, 180, 0.45);
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 40px;
+    padding-top: 28px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: 0.87rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer-credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer-credits img {
+    height: 22px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+}
+
+.footer-credits a {
+    color: var(--lavanda-light);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.footer-credits a:hover {
+    color: var(--blanco);
+}
+
+/* =====================================================
+   BACK-TO-TOP BUTTON
+===================================================== */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 28px;
+    bottom: 96px; /* encima del botón de WhatsApp */
+    z-index: 996;
+    background: var(--lavanda-dark);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 4px 14px rgba(124, 94, 138, 0.4);
+}
+
+.back-to-top:hover {
+    background: var(--lavanda);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}

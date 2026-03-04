@@ -1,0 +1,621 @@
+  /* =====================================================
+     FLORISTERÍA DELIRIOS — ESTILOS PRINCIPALES
+     Paleta: Lavanda #A78BB4, Verde musgo #4A6741, Crema #FDF6EE, Gris oscuro #2C2C2C
+  ===================================================== */
+:root {
+  --lavanda:       #A78BB4;
+  --lavanda-dark:  #7C5E8A;
+  --lavanda-light: #E8D8F0;
+  --verde:         #4A6741;
+  --verde-light:   #6D9164;
+  --crema:         #FDF6EE;
+  --crema-dark:    #F3E8D8;
+  --gris:          #2C2C2C;
+  --gris-light:    #6B6B6B;
+  --blanco:        #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--gris);
+  background: var(--crema);
+}
+
+/* ── Top Bar ── */
+#top-bar {
+  background: var(--lavanda-dark);
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+#top-bar a { color: #fff; text-decoration: none; margin: 0 12px; }
+#top-bar a:hover { text-decoration: underline; }
+#top-bar i { margin-right: 5px; }
+
+/* ── Hero ── */
+#hero {
+  background: linear-gradient(135deg, var(--lavanda-light) 0%, var(--crema) 60%, var(--crema-dark) 100%);
+  padding: 100px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(167,139,180,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--lavanda);
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+#hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 600;
+  color: var(--lavanda-dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+#hero h2 {
+  font-size: 1.1rem;
+  color: var(--gris-light);
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+.btn-delirios {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary-del {
+  background: var(--lavanda-dark);
+  color: #fff;
+}
+.btn-primary-del:hover {
+  background: var(--lavanda);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124,94,138,0.35);
+}
+.btn-secondary-del {
+  background: transparent;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+}
+.btn-secondary-del:hover {
+  background: var(--verde);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+.hero-stat { text-align: center; }
+.stat-number {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--lavanda-dark);
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--gris-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.hero-stat-divider {
+  width: 1px; height: 40px;
+  background: var(--lavanda-light);
+}
+/* Ilustración hero: pétalos SVG animados */
+.hero-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 320px;
+}
+.petal-svg { max-width: 420px; width: 100%; }
+
+/* ── Sección general ── */
+section { padding: 72px 0; }
+.section-title h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  color: var(--lavanda-dark);
+  margin-bottom: 10px;
+}
+.section-title p {
+  color: var(--gris-light);
+  font-size: 1rem;
+}
+.section-title .separator {
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--lavanda), var(--verde));
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+/* ── Categorías destacadas ── */
+#categorias { background: var(--blanco); }
+.cat-card {
+  background: var(--crema);
+  border-radius: 18px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid var(--lavanda-light);
+  cursor: pointer;
+  height: 100%;
+}
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(124,94,138,0.15);
+  border-color: var(--lavanda);
+}
+.cat-icon {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--lavanda-light), var(--crema-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 28px;
+  color: var(--lavanda-dark);
+}
+.cat-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lavanda-dark);
+  margin-bottom: 8px;
+}
+.cat-card p {
+  font-size: 0.88rem;
+  color: var(--gris-light);
+  margin: 0;
+}
+
+/* ── Ocasiones ── */
+#ocasiones { background: var(--crema); }
+.occasion-pill {
+  display: inline-block;
+  background: var(--blanco);
+  border: 1.5px solid var(--lavanda-light);
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: var(--lavanda-dark);
+  font-weight: 600;
+  margin: 6px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.occasion-pill:hover,
+.occasion-pill.active {
+  background: var(--lavanda-dark);
+  border-color: var(--lavanda-dark);
+  color: #fff;
+  transform: scale(1.04);
+}
+.occasion-pill i { margin-right: 6px; }
+
+/* ── Atributos / Diferenciales ── */
+#atributos { background: linear-gradient(135deg, var(--lavanda-dark) 0%, var(--verde) 100%); }
+#atributos .section-title h2,
+#atributos .section-title p { color: #fff; }
+#atributos .section-title .separator { background: rgba(255,255,255,0.5); }
+.attr-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s;
+  height: 100%;
+}
+.attr-card:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-4px);
+}
+.attr-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  color: var(--lavanda-light);
+}
+.attr-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.attr-card p { font-size: 0.88rem; opacity: 0.85; margin: 0; }
+
+/* ── Productos destacados ── */
+#productos { background: var(--blanco); }
+.product-card {
+  background: var(--crema);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--lavanda-light);
+  transition: all 0.3s;
+  height: 100%;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(124,94,138,0.16);
+}
+.product-img {
+  width: 100%; height: 200px;
+  background: linear-gradient(135deg, var(--lavanda-light), var(--crema-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.product-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  position: absolute; top: 0; left: 0;
+}
+.product-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: var(--lavanda-dark);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+.product-body { padding: 18px; }
+.product-body h5 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--lavanda-dark);
+  margin-bottom: 6px;
+}
+.product-body p {
+  font-size: 0.82rem;
+  color: var(--gris-light);
+  margin-bottom: 12px;
+}
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+.product-price span { font-size: 0.78rem; color: var(--gris-light); font-weight: 400; }
+.btn-pedido {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--lavanda-dark);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+.btn-pedido:hover {
+  background: var(--lavanda);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ── Cómo funciona ── */
+#como-funciona { background: var(--crema); }
+.step-card {
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 28px 22px;
+  text-align: center;
+  border: 1px solid var(--lavanda-light);
+  position: relative;
+  transition: all 0.3s;
+  height: 100%;
+}
+.step-card:hover {
+  box-shadow: 0 10px 30px rgba(124,94,138,0.12);
+  transform: translateY(-4px);
+}
+.step-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--lavanda-light);
+  line-height: 1;
+  position: absolute;
+  top: 14px; right: 18px;
+}
+.step-icon {
+  font-size: 32px;
+  color: var(--lavanda-dark);
+  margin-bottom: 14px;
+}
+.step-card h5 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--lavanda-dark);
+  margin-bottom: 8px;
+}
+.step-card p { font-size: 0.86rem; color: var(--gris-light); margin: 0; }
+
+/* ── Testimonios ── */
+#testimonios { background: var(--blanco); }
+.testimonial-card {
+  background: var(--crema);
+  border-radius: 18px;
+  padding: 30px;
+  border-left: 4px solid var(--lavanda);
+  margin: 10px;
+}
+.testimonial-card p {
+  font-style: italic;
+  color: var(--gris-light);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.testimonial-card .stars { color: #F0B429; font-size: 13px; margin-bottom: 6px; }
+.testimonial-card .name { font-weight: 700; color: var(--lavanda-dark); }
+
+/* ── Contacto ── */
+#contacto { background: var(--crema); }
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.contact-info-item i {
+  font-size: 22px;
+  color: var(--lavanda-dark);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.contact-info-item h4 {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gris-light);
+  margin-bottom: 2px;
+}
+.contact-info-item p { margin: 0; color: var(--gris); font-weight: 600; }
+.contact-form {
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 8px 32px rgba(124,94,138,0.1);
+}
+.contact-form label { font-size: 0.85rem; font-weight: 700; color: var(--lavanda-dark); margin-bottom: 4px; }
+.contact-form .form-control {
+  border-radius: 10px;
+  border: 1.5px solid var(--lavanda-light);
+  background: var(--crema);
+  color: var(--gris);
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+.contact-form .form-control:focus {
+  border-color: var(--lavanda);
+  box-shadow: 0 0 0 3px rgba(167,139,180,0.15);
+  outline: none;
+  background: #fff;
+}
+.btn-enviar {
+  background: linear-gradient(135deg, var(--lavanda-dark), var(--verde));
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 40px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124,94,138,0.3);
+}
+
+/* ── WhatsApp flotante ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(37,211,102,0.5);
+  z-index: 999;
+  transition: all 0.3s;
+}
+.whatsapp-float:hover {
+  background: #1ebc57;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ── Horarios banner ── */
+.horario-banner {
+  background: var(--verde);
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+}
+.horario-banner strong { color: var(--lavanda-light); }
+
+/* ── Responsive tweaks ── */
+@media (max-width: 768px) {
+  #hero { padding: 80px 0 40px; }
+  .hero-illustration { min-height: 220px; margin-top: 30px; }
+  .hero-stats { gap: 16px; }
+  .contact-form { padding: 24px; }
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  margin-top: 30px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-logo {
+    font-size: 3rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .service-card,
+  .feature-box {
+    margin-bottom: 30px;
+  }
+
+  .city-badge {
+    font-size: 0.95rem;
+    padding: 12px 25px;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .hero-carriers-bar {
+    position: relative;
+    bottom: auto;
+    transform: none;
+    margin-top: 30px;
+  }
+
+  .hero-visual-container::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .carrier-marquee-item {
+    font-size: 1.4rem;
+    padding: 0 30px;
+  }
+
+  .step-card::after {
+    display: none;
+  }
+}
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12) translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+  color: white;
+}
+
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #25D366;
+  animation: waPulse 2s ease-out infinite;
+  z-index: -1;
+}
+
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.7); opacity: 0; }
+}

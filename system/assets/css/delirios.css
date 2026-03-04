@@ -1,0 +1,406 @@
+/**
+ * Rodamel - Custom Brand Styles
+ * Last-mile delivery platform
+ * Brand colors: Vino Tinto, Naranja, Negro, Blanco
+ */
+
+/* ============================================
+   CSS Custom Properties (Brand Colors)
+   ============================================ */
+:root {
+  --rm-vino: #490102;
+  --rm-vino-light: #6b1a1b;
+  --rm-vino-dark: #2e0001;
+  --rm-naranja: #E94E1B;
+  --rm-naranja-light: #f07245;
+  --rm-naranja-dark: #c43a10;
+  --rm-negro: #000000;
+  --rm-blanco: #FFFFFF;
+  --rm-gris-claro: #f8f9fa;
+  --rm-gris-medio: #6c757d;
+  --rm-gris-oscuro: #343a40;
+  --rm-sombra: rgba(73, 1, 2, 0.08);
+  --rm-sombra-hover: rgba(73, 1, 2, 0.15);
+  --rm-gradient-vino: linear-gradient(135deg, var(--rm-vino) 0%, var(--rm-vino-light) 100%);
+  --rm-gradient-naranja: linear-gradient(135deg, var(--rm-naranja-dark) 0%, var(--rm-naranja) 100%);
+  --rm-gradient-mixed: linear-gradient(135deg, var(--rm-vino) 0%, var(--rm-naranja) 100%);
+}
+
+/* ============================================
+   Background Utilities
+   ============================================ */
+.bg-rm-vino {
+  background-color: var(--rm-vino) !important;
+  color: var(--rm-blanco) !important;
+}
+
+.bg-rm-naranja {
+  background-color: var(--rm-naranja) !important;
+  color: var(--rm-blanco) !important;
+}
+
+.bg-rm-negro {
+  background-color: var(--rm-negro) !important;
+  color: var(--rm-blanco) !important;
+}
+
+.bg-rm-gradient-vino {
+  background: var(--rm-gradient-vino) !important;
+  color: var(--rm-blanco) !important;
+}
+
+.bg-rm-gradient-naranja {
+  background: var(--rm-gradient-naranja) !important;
+  color: var(--rm-blanco) !important;
+}
+
+.bg-rm-gradient-mixed {
+  background: var(--rm-gradient-mixed) !important;
+  color: var(--rm-blanco) !important;
+}
+
+/* ============================================
+   Text Color Utilities
+   ============================================ */
+.text-rm-vino {
+  color: var(--rm-vino) !important;
+}
+
+.text-rm-naranja {
+  color: var(--rm-naranja) !important;
+}
+
+.text-rm-negro {
+  color: var(--rm-negro) !important;
+}
+
+/* ============================================
+   Border Utilities
+   ============================================ */
+.border-rm-vino {
+  border-color: var(--rm-vino) !important;
+}
+
+.border-rm-naranja {
+  border-color: var(--rm-naranja) !important;
+}
+
+/* ============================================
+   Button Overrides
+   ============================================ */
+.btn-rm-vino {
+  background-color: var(--rm-vino);
+  border-color: var(--rm-vino);
+  color: var(--rm-blanco);
+}
+
+.btn-rm-vino:hover,
+.btn-rm-vino:focus {
+  background-color: var(--rm-vino-light);
+  border-color: var(--rm-vino-light);
+  color: var(--rm-blanco);
+}
+
+.btn-rm-naranja {
+  background-color: var(--rm-naranja);
+  border-color: var(--rm-naranja);
+  color: var(--rm-blanco);
+}
+
+.btn-rm-naranja:hover,
+.btn-rm-naranja:focus {
+  background-color: var(--rm-naranja-dark);
+  border-color: var(--rm-naranja-dark);
+  color: var(--rm-blanco);
+}
+
+.btn-outline-rm-vino {
+  border-color: var(--rm-vino);
+  color: var(--rm-vino);
+  background-color: transparent;
+}
+
+.btn-outline-rm-vino:hover,
+.btn-outline-rm-vino:focus {
+  background-color: var(--rm-vino);
+  color: var(--rm-blanco);
+}
+
+.btn-outline-rm-naranja {
+  border-color: var(--rm-naranja);
+  color: var(--rm-naranja);
+  background-color: transparent;
+}
+
+.btn-outline-rm-naranja:hover,
+.btn-outline-rm-naranja:focus {
+  background-color: var(--rm-naranja);
+  color: var(--rm-blanco);
+}
+
+/* ============================================
+   Dashboard Welcome Section
+   ============================================ */
+.rm-welcome-section {
+  background: var(--rm-gradient-mixed);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--rm-blanco);
+  position: relative;
+  overflow: hidden;
+}
+
+.rm-welcome-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.rm-welcome-section::after {
+  content: '';
+  position: absolute;
+  bottom: -60%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+}
+
+.rm-welcome-section h2 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rm-welcome-section p {
+  opacity: 0.9;
+  margin-bottom: 0;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rm-welcome-section .welcome-icon {
+  font-size: 3rem;
+  opacity: 0.3;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ============================================
+   Dashboard Cards
+   ============================================ */
+.rm-dashboard-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 12px var(--rm-sombra);
+}
+
+.rm-dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--rm-sombra-hover);
+}
+
+.rm-dashboard-card .card-body {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.rm-dashboard-card .card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rm-dashboard-card .card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--rm-gris-medio);
+  margin-bottom: 0.5rem;
+}
+
+.rm-dashboard-card .card-count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rm-negro);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.rm-dashboard-card .card-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
+}
+
+.rm-dashboard-card .card-link:hover {
+  gap: 8px;
+}
+
+.rm-dashboard-card .card-bg-icon {
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+  font-size: 7rem;
+  opacity: 0.04;
+  z-index: 0;
+  line-height: 1;
+}
+
+/* ============================================
+   Dashboard Card Color Accents
+   ============================================ */
+.rm-card-accent-vino .card-icon {
+  background-color: rgba(73, 1, 2, 0.1);
+  color: var(--rm-vino);
+}
+
+.rm-card-accent-vino .card-link {
+  color: var(--rm-vino);
+}
+
+.rm-card-accent-naranja .card-icon {
+  background-color: rgba(233, 78, 27, 0.1);
+  color: var(--rm-naranja);
+}
+
+.rm-card-accent-naranja .card-link {
+  color: var(--rm-naranja);
+}
+
+.rm-card-accent-negro .card-icon {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: var(--rm-negro);
+}
+
+.rm-card-accent-negro .card-link {
+  color: var(--rm-negro);
+}
+
+/* ============================================
+   Footer Branding
+   ============================================ */
+.rm-footer {
+  color: var(--rm-gris-medio);
+  font-size: 0.85rem;
+}
+
+.rm-footer a {
+  color: var(--rm-vino);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.rm-footer a:hover {
+  color: var(--rm-naranja);
+}
+
+/* ============================================
+   Sidebar Brand Override
+   ============================================ */
+.sidebar .nav-link.active {
+  background-color: var(--rm-vino) !important;
+  color: var(--rm-blanco) !important;
+}
+
+.sidebar .nav-link.active i {
+  color: var(--rm-blanco) !important;
+}
+
+/* ============================================
+   Pagetitle Override
+   ============================================ */
+.pagetitle h1 {
+  color: var(--rm-vino);
+}
+
+.breadcrumb-item.active {
+  color: var(--rm-naranja);
+}
+
+/* ============================================
+   Badge Utilities
+   ============================================ */
+.badge-rm-vino {
+  background-color: var(--rm-vino);
+  color: var(--rm-blanco);
+}
+
+.badge-rm-naranja {
+  background-color: var(--rm-naranja);
+  color: var(--rm-blanco);
+}
+
+/* ============================================
+   Quick Stats Row
+   ============================================ */
+.rm-stats-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+@media (max-width: 768px) {
+  .rm-welcome-section {
+    padding: 1.5rem;
+  }
+
+  .rm-welcome-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .rm-welcome-section .welcome-icon {
+    display: none;
+  }
+
+  .rm-dashboard-card .card-count {
+    font-size: 1.5rem;
+  }
+
+  .rm-dashboard-card .card-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rm-welcome-section {
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .rm-dashboard-card {
+    border-radius: 8px;
+  }
+}
